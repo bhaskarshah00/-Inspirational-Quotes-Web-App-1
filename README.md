@@ -2,7 +2,7 @@
 
 A beautiful and resilient web application that delivers daily inspiration through random quotes, quote of the day, and aesthetic background images. Powered by a robust Flask backend with smart retries, caching, and offline fallback capabilities.
 
-![QuoteWave Screenshot](QuoteWave Screenshot.png) 
+![QuoteWave Screenshot](QuoteWaveScreenshot.png) 
 
 
 ## ✨ Features
