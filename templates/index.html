@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuoteWave • Daily Inspiration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span id="quoteWaveLabel">QuoteWave</span></a>
+      <button class="btn btn-outline-light ms-auto" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-800">Daily inspiration, beautifully delivered.</h1>
+        <p class="lead text-secondary">Random quotes, quote of the day, and aesthetic images — powered by a resilient Python backend with offline fallback.</p>
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn btn-primary btn-lg" id="btnRandom">🎲 Random</button>
+          <button class="btn btn-outline-primary btn-lg" id="btnToday">☀️ Today</button>
+          <button class="btn btn-outline-secondary btn-lg" id="btnImage">🖼️ New Image</button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card glass shadow-lg overflow-hidden">
+          <img id="heroImage" alt="Quote background" class="w-100 h-100 object-cover" src="" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card glass p-4 shadow-lg" id="quoteCard">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="badge bg-primary" id="provider">PROVIDER</span>
+            <small class="text-muted" id="timestamp">--</small>
+          </div>
+          <blockquote class="blockquote mb-0">
+            <p id="quoteText" class="display-6">—</p>
+            <footer class="blockquote-footer mt-3"><span id="quoteAuthor"></span></footer>
+          </blockquote>
+          <div class="mt-4 d-flex gap-2">
+            <button class="btn btn-success" id="btnCopy">Copy</button>
+            <button class="btn btn-outline-secondary" id="btnTweet">Tweet</button>
+            <button class="btn btn-outline-dark" id="btnRefresh">Refresh</button>
+          </div>
+          <div class="mt-2">
+            <small id="statusLine" class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card glass p-3 shadow-lg">
+          <h5 class="mb-3" id="pickSourceLabel">Pick Source (optional)</h5>
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label">Random</label>
+              <select id="randomSource" class="form-select">
+                <option value="auto">Auto</option>
+                <option value="zenquotes">ZenQuotes</option>
+                <option value="quotable">Quotable</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Today</label>
+              <select id="todaySource" class="form-select">
+                <option value="auto">Auto</option>
+                <option value="zenquotes_today">ZenQuotes Today</option>
+                <option value="quotable">Quotable</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label mt-2">Image</label>
+              <select id="imageSource" class="form-select">
+                <option value="auto">Auto</option>
+                <option value="zenquotes_image">ZenQuotes Image</option>
+                <option value="picsum">Picsum Nature</option>
+              </select>
+            </div>
+          </div>
+          <hr class="my-4"/>
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-primary" id="btnDownload">Download as PNG</button>
+            <small class="text-muted">A screenshot of the quote card will be downloaded.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-dark text-center text-light">
+    <small>© <span id="year"></span> QuoteWave — Flask + ZenQuotes + Quotable + Picsum.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="/static/main.js"></script>
+</body>
+</html>
