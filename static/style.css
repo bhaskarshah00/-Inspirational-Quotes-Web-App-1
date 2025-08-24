@@ -1,0 +1,130 @@
+/* Style for Today button to match Random button */
+#btnToday {
+  background-color: #1da1f2;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#btnToday:hover {
+  background-color: #1a8cd8; /* Slightly darker blue on hover */
+}
+/* Style for Copy button */
+#btnCopy {
+  background-color: #28a745; /* Green color */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 1; /* Ensure it's not faded */
+}
+
+#btnCopy:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+/* Style for Refresh button to match Copy button */
+#btnRefresh {
+  background-color: #28a745; /* Green color matching Copy button */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 1; /* Ensure it's not faded */
+}
+
+#btnRefresh:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+/* Style for QuoteWave to match blue border */
+/* Ensure the selector matches the HTML element with id="quoteWaveLabel" */
+#quoteWaveLabel {
+  background-color: #1da1f2;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+/* Style for Pick Source (optional) to match ZENQUOTES_TODAY */
+#pickSourceLabel {
+  background-color: #1da1f2;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+/* Style for date-time to match ZENQUOTES_TODAY */
+#timestamp {
+  background-color: #1da1f2;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+/* Base styles and dark mode */
+:root {
+  --bg: #0b0f14;
+  --fg: #ffffff;
+  --muted: #9bb0c3;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.fw-800 { font-weight: 800; }
+
+.hero .card.glass, .glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+}
+
+#quoteText,
+#quoteAuthor,
+#statusLine,
+#timestamp {
+  color: var(--fg);
+}
+
+.object-cover { object-fit: cover; aspect-ratio: 16/9; }
+
+blockquote p { line-height: 1.2; }
+
+.navbar, footer { background: rgba(0, 0, 0, 0.6) !important; }
+
+.badge { text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Light mode styles */
+.light body { 
+  background: #f6f8fb; 
+  color: #111; 
+}
+
+.light .glass { 
+  background: rgba(255, 255, 255, 0.8); 
+  border-color: rgba(0, 0, 0, 0.1); 
+}
+
+.light #quoteText,
+.light #quoteAuthor,
+.light #statusLine,
+.light #timestamp { 
+  color: #222; 
+}
+
+.light .navbar, .light footer { 
+  background: #ffffff !important; 
+  color: #111; 
+}
